@@ -1,0 +1,19 @@
+public class ObserverTest {
+
+	public static void main(String[] args) {
+		ClubMeeting CM = new ClubMeeting("LHC", "5th Nov", "1:30");
+		ClubMember cMem = new ClubMember(CM);
+		ClubMember cMem2 = new ClubMember(CM);
+		CM.notifyObserver();
+		cMem.display();
+		cMem2.display();
+		CM.setTheAppointment("ESB", "6th Nov", "2:30");
+		cMem.display();
+		cMem2.display();
+		CM.setTheAppointment("DES", "8th Nov", "3:30");
+		cMem.display();
+		cMem2.display();
+	}
+
+}
+
